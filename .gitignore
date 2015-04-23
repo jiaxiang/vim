@@ -1,0 +1,13 @@
+.DS_Store
+
+user_guide/*
+*.bkp
+*.log
+*.orig
+*~
+.commit
+.#*
+
+
+.*.sw[a-z]
+.swp
