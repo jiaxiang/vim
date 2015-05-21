@@ -44,6 +44,8 @@ set foldlevel=1
 "set <Tab> autocomplete
 set wildmenu
 set wildmode=full
+"set tags
+set tags+=~/Code/php-src/tags
 "php 
 inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
 nnoremap <C-P> :call PhpDocSingle()<CR>
