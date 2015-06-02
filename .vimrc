@@ -11,6 +11,8 @@ Plugin 'Lokaltog/powerline'
 Bundle 'shawncplus/phpcomplete.vim'
 "Bundle 'vim-scripts/taglist.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'terryma/vim-expand-region'
+Plugin 'terryma/vim-multiple-cursors'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -59,10 +61,22 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags 
 
 "conf for tabs
-let mapleader = ','
+let mapleader = "\<Space>"
 nnoremap <C-l> gt
 nnoremap <C-h> gT
-nnoremap <leader>t : tabe<CR>
+nnoremap <Leader>t :tabe<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <CR> G
+nnoremap <BS> gg
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+nmap <Leader><Leader> V
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
 ":edit %h:<Tab>
 cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%'
